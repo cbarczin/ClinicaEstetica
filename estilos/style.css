@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8e6ef;
+  font-family: Inter;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8e6ef;
+  padding: 15px;
+}
+header #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #logo #iconlogo {
+  width: 30%;
+}
+header #logo p {
+  font-size: 25px;
+  font-style: italic;
+  color: #8b5d74;
+}
+header input {
+  padding: 10px;
+  border: #8b5d74 3px solid;
+  border-radius: 150px;
+  width: 30%;
+  height: 30%;
+  text-align: center;
+  position: relative;
+  left: 110px;
+}
+
+button {
+  background-color: #f8e6ef;
+  border: none;
+}
+button img {
+  width: 80%;
+}
+
+nav {
+  background-color: #8b5d74;
+  color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+nav ul a {
+  text-decoration: none;
+}
+nav ul li {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

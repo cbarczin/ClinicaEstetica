@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8e6ef;
+  height: 100%;
+  font-family: Inter;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8e6ef;
+  padding: 15px;
+}
+header #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #logo #iconlogo {
+  width: 30%;
+}
+header #logo p {
+  font-size: 25px;
+  font-style: italic;
+  color: #8b5d74;
+}
+header input {
+  padding: 10px;
+  border: #8b5d74 3px solid;
+  border-radius: 150px;
+  width: 30%;
+  height: 30%;
+  text-align: center;
+  position: relative;
+  left: 110px;
+}
+
+button {
+  background-color: #f8e6ef;
+  border: none;
+}
+button img {
+  width: 80%;
+}
+
+nav {
+  background-color: #8b5d74;
+  color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+nav ul a {
+  text-decoration: none;
+}
+nav ul li {
+  color: white;
+  list-style-type: none;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section {
+  background-color: #F3D8E6;
+  text-align: center;
+  padding: 35px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 2%;
+  position: relative;
+  bottom: 110px;
+  /*h1, h2 {
+      font-size: 32px;
+      color: #8b5d74;
+      font-style: italic;
+  }*/
+}
+main section h1 {
+  font-size: 32px;
+  color: #8b5d74;
+  font-style: italic;
+}
+main section h2 {
+  font-size: 24px;
+  color: #8b5d74;
+}
+main section p {
+  color: #8b5d74;
+  width: 100%;
+}
+main section a {
+  text-decoration: none;
+}
+main section div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main section div p {
+  width: 100%;
+  padding: 10px;
+}
+main section div p:hover {
+  background-color: #8b5d74;
+  padding: 10px;
+  color: white;
+  width: 100%;
+}
+main section #pmain {
+  font-size: 17px;
+  font-weight: bold;
+  color: #8b5d74;
+  padding: 5px;
+}
+main section #acessemail {
+  padding: 5px;
+  border: 2px solid #8b5d74;
+  border-radius: 7px;
+  font-weight: 500;
+}
+main section #google {
+  background-color: red;
+}
+main section #faceb {
+  background-color: blue;
+}
+main section #email {
+  background-color: #8b5d74;
+}
+main section #google, main section #faceb, main section #email {
+  color: white;
+  font-weight: 500;
+  padding: 7px;
+  border-radius: 7px;
+}/*# sourceMappingURL=styleentrar.css.map */
