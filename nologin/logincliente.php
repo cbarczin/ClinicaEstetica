@@ -55,14 +55,15 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
         <div>
             <button><img src="../images/local.png" alt="local"></button>            
             <button><img src="../images/compras.png" alt="compras"></button>               
-            <button><img src="../images/instagram.png" alt="instagram">
-            </button><a href="../arquivoshtml/entrar.html"><button><img src="../images/entrar.png" alt="entrar"></button>
+            <button><img src="../images/instagram.png" alt="instagram"></button>            
+            <a href="./entrar.html"><button onclick="w"><img src="../images/entrar.png" alt="entrar"></button>
             </a>
+            
             <button><img src="../images/contato.png" alt="contato"></button>
         </header>
         <nav>
             <ul>
-            <a href="../arquivoshtml/index.html"><li>INICIO</li></a>    
+            <a href="./index.html"><li>INICIO</li></a>    
             <li>SOBRE NÓS</li>
             <li>SERVIÇOS</li>
             <li>PROMOÇÕES</li>
@@ -73,18 +74,15 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
         </nav>
     <main>
     <section>
-            <h1>Área do Administrador</h1>
-            <h2>Realize seu login para ter acesso ao sistema</h2>
-            <form action="" method="post">
-            <label for="usuario">Informe seu usuário</label>      
-            <input type="text" name="usuario" required>
-            <label for="senha">Informe sua senha</label>
-            <input type="password" name="senha" required>
+            <h1>Olá, cliente!</h1>
+            <h2>Acesse sua conta para agendar seus horários e conferir novidades</h2>
+            <form action="login.php" method="post">
+            <label for="usuario">Informe seu email</label>    
+            <input type="email" placeholder="ex: xxxxxxx@email.com">
+            <label for="senha">Digite sua senha</label>
+            <input type="password" placeholder="**********">
             <input type="submit" value="Entrar" id="enviar">
-            </form> 
-            <?php if(!empty($erro)):?>
-                    <p style="color: red; font-weight: 700; font-size: 18px; text-align: center;"><?php echo $erro; ?></p>
-            <?php endif; ?> 
+            </form>
     </section>
     </main>
 </body>
