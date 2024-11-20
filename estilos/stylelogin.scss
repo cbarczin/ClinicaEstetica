@@ -102,13 +102,11 @@ main {
             font-style: italic;
         }
 
-        h3 {
+        h2 {
             font-size: 18px;
             color: #8b5d74;
 
         }
-
-
 
         div {
             display: flex;
@@ -121,6 +119,10 @@ main {
 
             label {
                 text-align: left;
+                //background-color: #8b5d74;
+                color: #8b5d74;
+                font-family: Inter;
+                font-weight: 600;
             }
 
             input {
@@ -130,9 +132,38 @@ main {
                 padding: 10px;
                 width: 80%;
             }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 30vh;
+
+            label {
+                text-align: left;
+                font-family: Inter;
+                color: #8b5d74;
+            }
+
+            input {
+                background-color:white;
+                border: 2px solid #8b5d74;
+                border-radius: 10px;
+                width: 60%;
+                padding: 7px;
+            }
 
             #enviar {
+                background-color: #8b5d74;
+                font-family: Inter;
+                padding: 10px;
+                border: 2px solid;
+                border-radius: 20px;
+                color: white;
                 width: 25%;
+
             }
         }
     }

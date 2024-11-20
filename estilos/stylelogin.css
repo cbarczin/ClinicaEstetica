@@ -93,7 +93,7 @@ main section h1 {
   color: #8b5d74;
   font-style: italic;
 }
-main section h3 {
+main section h2 {
   font-size: 18px;
   color: #8b5d74;
 }
@@ -108,6 +108,9 @@ main section div {
 }
 main section div label {
   text-align: left;
+  color: #8b5d74;
+  font-family: Inter;
+  font-weight: 600;
 }
 main section div input {
   background-color: #e1c3d3;
@@ -116,6 +119,31 @@ main section div input {
   padding: 10px;
   width: 80%;
 }
-main section div #enviar {
+main section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+}
+main section form label {
+  text-align: left;
+  font-family: Inter;
+  color: #8b5d74;
+}
+main section form input {
+  background-color: white;
+  border: 2px solid #8b5d74;
+  border-radius: 10px;
+  width: 60%;
+  padding: 7px;
+}
+main section form #enviar {
+  background-color: #8b5d74;
+  font-family: Inter;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 20px;
+  color: white;
   width: 25%;
 }/*# sourceMappingURL=stylelogin.css.map */
