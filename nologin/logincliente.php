@@ -27,7 +27,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['usuario'] = $usuario['usuario'];
 
-            header("Location: painel.php");
+            header("Location: ../loginCliente/clienteLogado.html");
 
         } else {
             $erro = "Falha ao logar! Email ou senha incorretos";
@@ -56,7 +56,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
             <button><img src="../images/local.png" alt="local"></button>            
             <button><img src="../images/compras.png" alt="compras"></button>               
             <button><img src="../images/instagram.png" alt="instagram"></button>            
-            <a href="./entrar.html"><button onclick="w"><img src="../images/entrar.png" alt="entrar"></button>
+            <a href="./entrar.html"><button><img src="../images/entrar.png" alt="entrar"></button>
             </a>
             
             <button><img src="../images/contato.png" alt="contato"></button>
@@ -76,13 +76,16 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
     <section>
             <h1>Olá, cliente!</h1>
             <h2>Acesse sua conta para agendar seus horários e conferir novidades</h2>
-            <form action="login.php" method="post">
+            <form action="" method="post">
             <label for="usuario">Informe seu email</label>    
-            <input type="email" placeholder="ex: xxxxxxx@email.com">
+            <input type="text" name="usuario" placeholder="ex: xxxxxxx@email.com" required>
             <label for="senha">Digite sua senha</label>
-            <input type="password" placeholder="**********">
+            <input type="password" name="senha" placeholder="**********" required>
             <input type="submit" value="Entrar" id="enviar">
             </form>
+            <?php if(!empty($erro)):?>
+                    <p style="color: red; font-weight: 700; font-size: 18px; text-align: center;"><?php echo $erro; ?></p>
+            <?php endif; ?> 
     </section>
     </main>
 </body>

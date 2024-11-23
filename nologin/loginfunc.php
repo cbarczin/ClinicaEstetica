@@ -32,7 +32,6 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
         } else {
             $erro = "Falha ao logar! Email ou senha incorretos";
         }
-
     }
 }
 ?>
