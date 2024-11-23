@@ -1,0 +1,239 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8e6ef;
+  color: #8b5d74;
+}
+
+/* Header */
+header {
+  background-color: #f8e6ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o logo e o texto */
+}
+
+#logo img {
+  width: 50px;
+  height: auto;
+}
+
+#logo p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#busca input {
+  width: 400px;
+  padding: 10px;
+  border: 2px solid #8b5d74;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#busca button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#icones {
+  display: flex;
+  gap: 15px; /* Espaçamento entre os ícones */
+}
+
+#icones button,
+#icones a {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#icones img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Nav */
+nav {
+  background-color: #8b5d74;
+  width: 100%;
+  padding: 5px 50px;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1819;
+  color: #ffffff;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 50px; /* Mesmo tamanho da logo no header */
+  height: auto;
+}
+
+.footer-logo span {
+  font-size: 24px; /* Mesmo tamanho da fonte no header */
+  font-weight: bold;
+  color: #ffffff; /* Garante que o texto tenha boa visibilidade no fundo escuro */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.map img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  display: block;
+}
+
+.hours-location p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-column:last-child {
+  text-align: right; /* Alinha o conteúdo da última coluna à direita */
+}
+
+.equipe {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8e6ef;
+}
+
+.equipe h2 {
+  font-size: 18px;
+  color: #8b5d74;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-items: center; /* Centraliza os cards horizontalmente */
+}
+
+.team-member {
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+  font-size: 16px;
+  color: #8b5d74;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #a75e80;
+  margin-bottom: 10px;
+}
+
+.team-member ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #8b5d74;
+}
+
+.team-member ul li {
+  margin-bottom: 5px;
+}

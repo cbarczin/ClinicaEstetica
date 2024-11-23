@@ -1,0 +1,275 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8e6ef;
+  color: #8b5d74;
+}
+
+/* Header */
+header {
+  background-color: #f8e6ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#barraSuperior {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o logo e o texto */
+}
+
+#logo img {
+  width: 50px;
+  height: auto;
+}
+
+#logo p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#busca input {
+  width: 400px;
+  padding: 10px;
+  border: 2px solid #8b5d74;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#busca button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#icones {
+  display: flex;
+  gap: 15px; /* Espaçamento entre os ícones */
+}
+
+#icones button,
+#icones a {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#icones img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Nav */
+nav {
+  background-color: #8b5d74;
+  width: 100%;
+  padding: 5px 50px;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Main */
+
+.sobre-nos {
+  text-align: center;
+  padding: 20px;
+}
+
+.sobre-nos h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #8c6080;
+}
+
+.sobre-nos .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-nos .text {
+  margin-top: 40px;
+  flex: 1;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.sobre-nos .image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-nos .image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-nos .curiosidades {
+  flex: 1;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.sobre-nos .curiosidades h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #8c6080;
+}
+
+.sobre-nos .curiosidades ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sobre-nos .curiosidades ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.sobre-nos .button-container {
+  margin-top: 20px;
+}
+
+.sobre-nos .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8c6080;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sobre-nos .button:hover {
+  background-color: #6a475f;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1819;
+  color: #ffffff;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+
+  padding-top: 30px;
+}
+
+.footerConteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.footerConteudo > div {
+  flex: 1;
+  min-width: 200px; /* Garante que os itens fiquem responsivos */
+}
+
+.footer-logo img,
+.mapa img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-info,
+.horario,
+.mapa {
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 50px; /* Mesmo tamanho da logo no header */
+  height: auto;
+}
+
+.footer-logo span {
+  font-size: 24px; /* Mesmo tamanho da fonte no header */
+  font-weight: bold;
+  color: #ffffff; /* Garante que o texto tenha boa visibilidade no fundo escuro */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.whatsapp-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  display: block;
+}
+
+.horario p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-column:last-child {
+  text-align: right; /* Alinha o conteúdo da última coluna à direita */
+}

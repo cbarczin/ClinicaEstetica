@@ -1,0 +1,240 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #f8e6ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#barraSuperior {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo img {
+  width: 50px;
+  height: auto;
+}
+
+#logo p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#busca input {
+  width: 400px;
+  padding: 10px;
+  border: 2px solid #8b5d74;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#busca button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#icones {
+  display: flex;
+  gap: 15px;
+}
+
+#icones button,
+#icones a {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#icones img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#menuSuperior {
+  background-color: #8b5d74;
+  width: 100%;
+  padding: 5px 50px;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1819;
+  color: #ffffff;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.footerConteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.footerConteudo > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo img,
+.mapa img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-info,
+.horario,
+.mapa {
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.horario p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-column:last-child {
+  text-align: right;
+}
+main.servicos {
+  padding: 20px;
+}
+
+main.servicos h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+main.servicos p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.servicos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.servico {
+  border: 1px solid #8b5d74;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.servico-header {
+  width: 100%;
+  background-color: #f3dce4;
+  color: #8b5d74;
+  font-weight: bold;
+  border: none;
+  text-align: left;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.servico-header .toggle-icon {
+  float: right;
+  font-size: 18px;
+}
+
+.servico-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  padding: 0 15px;
+  background-color: #fff;
+}
+
+.servico-content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.servico.open .servico-content {
+  max-height: 100px; /* Ajuste conforme necessário */
+  padding: 10px 15px;
+}
+
+.servico.open .servico-header .toggle-icon {
+  content: "x";
+}

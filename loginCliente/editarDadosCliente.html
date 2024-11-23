@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/estilos/styleEditarDadosCliente.css" />
+    <title>Editar Dados Pessoais</title>
+  </head>
+  <body>
+    <header>
+      <div id="barraSuperior">
+        <div id="logo">
+          <img
+            id="iconlogo"
+            src="/images/logo.png"
+            alt="Logo da CariocaBeauty"
+          />
+          <p>CariocaBeauty</p>
+        </div>
+        <div id="busca">
+          <label for="campo-busca" class="sr-only"></label>
+          <input
+            type="text"
+            id="campo-busca"
+            placeholder="FAÇA SUA BUSCA AQUI"
+            aria-label="Busca"
+          />
+          <button aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div id="icones">
+          <button aria-label="Localização">
+            <img src="/images/local.png" alt="Ícone de localização" />
+          </button>
+          <button aria-label="Carrinho de compras">
+            <img src="/images/compras.png" alt="Ícone de compras" />
+          </button>
+          <button aria-label="Instagram">
+            <img src="/images/instagram.png" alt="Ícone do Instagram" />
+          </button>
+          <a href="/arquivoshtml/entrar.html" aria-label="Entrar"
+            ><img src="/images/entrar.png" alt="Ícone de entrar"
+          /></a>
+          <button aria-label="Contato">
+            <img src="/images/contato.png" alt="Ícone de contato" />
+          </button>
+        </div>
+      </div>
+      <nav id="menuSuperior">
+        <ul>
+          <li><a href="/arquivoshtml/index.html">INÍCIO</a></li>
+          <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+          <li><a href="#servicos">SERVIÇOS</a></li>
+          <li><a href="#promocoes">PROMOÇÕES</a></li>
+          <li><a href="#equipe">EQUIPE</a></li>
+          <li><a href="#central-ajuda">CENTRAL DE AJUDA</a></li>
+          <li><a href="#agendar">AGENDAR</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="dados-pessoais">
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="/images/alice.jpg" alt="Alana" class="profile-img" />
+          <h2>Olá, Alana!</h2>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Dados pessoais</a></li>
+            <li><a href="#">Endereço</a></li>
+            <li><a href="#">Autenticação</a></li>
+            <li><a href="#">Pedidos</a></li>
+            <li><a href="#">Sair</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="content">
+        <h1>Editar dados pessoais</h1>
+        <form class="details">
+          <!-- Coluna 1 -->
+          <div class="column">
+            <div class="info">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Maria" />
+            </div>
+            <div class="info">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" id="sobrenome" placeholder="Silva" />
+            </div>
+            <div class="info">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="maria@email.com" />
+            </div>
+            <div class="info">
+              <label for="cpf">CPF</label>
+              <input type="text" id="cpf" placeholder="000.000.000-00" />
+            </div>
+          </div>
+          <!-- Coluna 2 -->
+          <div class="column">
+            <div class="info">
+              <label for="genero">Gênero</label>
+              <input type="text" id="genero" placeholder="Feminino" />
+            </div>
+            <div class="info">
+              <label for="telefone">Telefone</label>
+              <input type="text" id="telefone" placeholder="(00) 00000-0000" />
+            </div>
+            <div class="info">
+              <label for="data-nascimento">Data de nascimento</label>
+              <input type="date" id="data-nascimento" />
+            </div>
+          </div>
+          <button type="submit" class="edit-button">Salvar alterações</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footerConteudo">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Logo CariocaBeauty" />
+          <span>CariocaBeauty</span>
+        </div>
+        <div class="contact-info">
+          <p><i class="icon-phone"></i> (21) 1234-5678</p>
+          <p><i class="icon-phone"></i> (21) 99999-9999</p>
+          <p><i class="icon-email"></i> contato@cariocabeauty.com.br</p>
+        </div>
+        <div class="horario">
+          <p><strong>HORÁRIO DE FUNCIONAMENTO:</strong></p>
+          <p>Segunda-feira: 14h às 20h</p>
+          <p>Terça a sábado: 9h às 21h</p>
+        </div>
+        <div class="mapa">
+          <img
+            src="/images/mapaclinica.jpg"
+            alt="Mapa para chegar na clínica"
+          />
+          <span>Rua Barão de Jaguaripe, 3454 – Ipanema</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
