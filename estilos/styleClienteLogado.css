@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8e6ef;
+  color: #8b5d74;
+}
+
+header {
+  background-color: #f8e6ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#barraSuperior {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo img {
+  width: 50px;
+  height: auto;
+}
+
+#logo p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#busca input {
+  width: 400px;
+  padding: 10px;
+  border: 2px solid #8b5d74;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#busca button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#icones {
+  display: flex;
+  gap: 15px;
+}
+
+#icones button,
+#icones a {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#icones img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#menuSuperior {
+  background-color: #8b5d74;
+  width: 100%;
+  padding: 5px 50px;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1819;
+  color: #ffffff;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.footerConteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.footerConteudo > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo img,
+.mapa img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-info,
+.horario,
+.mapa {
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.horario p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-column:last-child {
+  text-align: right;
+}
