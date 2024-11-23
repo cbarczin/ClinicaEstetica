@@ -1,18 +1,15 @@
-/* Reset Básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo Geral */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8e6ef;
   color: #8b5d74;
 }
 
-/* Header */
 header {
   background-color: #f8e6ef;
   display: flex;
@@ -31,7 +28,7 @@ header {
 #logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espaçamento entre o logo e o texto */
+  gap: 10px;
 }
 
 #logo img {
@@ -66,7 +63,7 @@ header {
 
 #icones {
   display: flex;
-  gap: 15px; /* Espaçamento entre os ícones */
+  gap: 15px;
 }
 
 #icones button,
@@ -87,7 +84,6 @@ header {
   object-fit: contain;
 }
 
-/* Nav */
 nav {
   background-color: #8b5d74;
   width: 100%;
@@ -109,8 +105,6 @@ nav ul li a {
   font-weight: bold;
   font-size: 16px;
 }
-
-/* Main */
 
 .sobre-nos {
   text-align: center;
@@ -200,7 +194,6 @@ nav ul li a {
   color: #ffffff;
   padding: 20px 40px;
   flex-wrap: wrap;
-
   padding-top: 30px;
 }
 
@@ -214,7 +207,7 @@ nav ul li a {
 
 .footerConteudo > div {
   flex: 1;
-  min-width: 200px; /* Garante que os itens fiquem responsivos */
+  min-width: 200px;
 }
 
 .footer-logo img,
@@ -241,14 +234,14 @@ nav ul li a {
 }
 
 .footer-logo img {
-  width: 50px; /* Mesmo tamanho da logo no header */
+  width: 50px;
   height: auto;
 }
 
 .footer-logo span {
-  font-size: 24px; /* Mesmo tamanho da fonte no header */
+  font-size: 24px;
   font-weight: bold;
-  color: #ffffff; /* Garante que o texto tenha boa visibilidade no fundo escuro */
+  color: #ffffff;
 }
 
 .contact-info p {
@@ -271,5 +264,5 @@ nav ul li a {
 }
 
 .footer-column:last-child {
-  text-align: right; /* Alinha o conteúdo da última coluna à direita */
+  text-align: right;
 }
