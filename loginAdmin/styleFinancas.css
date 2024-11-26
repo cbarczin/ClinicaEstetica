@@ -127,13 +127,33 @@ main.content {
 }
 
 .admin-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 2px solid #7c5a68;
   border-radius: 10px;
-  padding: 23px;
+  padding: 20px;
   text-align: center;
-  width: 15vw;
+  width: 80vw;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 80vw;
+}
+
+tr {
+  color: rgb(0, 0, 0);
+  padding: 5px;
+}
+
+td {
+  background-color: #72b078;
+  padding: 5px;
+}
+
+#red {
+  background-color: rgb(246, 96, 96);
 }
 
 .admin-photo {

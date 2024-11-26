@@ -15,7 +15,7 @@
       </section>
       <nav class="menu">
         <a href="./administradores.html"><button class="active">Administradores</button></a> 
-        <a href="./funcionarios.html"><button>Funcionários</button></a> 
+        <a href="./funcionarios.php"><button>Funcionários</button></a> 
         <a href="./servicos.html"><button>Serviços</button></a> 
         <a href="./financas.html"><button>Finanças</button></a> 
       </nav>
@@ -30,11 +30,7 @@
             class="admin-photo"
           />
           <p>Sandro</p>
-          <button class="profile-btn">Ver Perfil</button>
-        </div>
-
-        <div class="logo">
-          <img src="images/logo.png" alt="Logo" />
+          <button class="profile-btn" onclick="abrir()">Ver Perfil</button>
         </div>
 
         <div class="admin-card">
@@ -44,11 +40,12 @@
             class="admin-photo"
           />
           <p>Francisco</p>
-          <button class="profile-btn">Ver Perfil</button>
+          <a href="./administradorFrancisco.php"><button class="profile-btn">Ver Perfil</button></a>
         </div>
       </section>
       <button class="add-admin-btn">Cadastrar Administrador</button>
     </main>
+
 
     <footer>
       <p class="warning">
@@ -56,5 +53,3 @@
         DESCONECTE SUA CONTA INSTITUCIONAL AO TERMINAR SEUS AFAZERES
       </p>
     </footer>
-  </body>
-</html>

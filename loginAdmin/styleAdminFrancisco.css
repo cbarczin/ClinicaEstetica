@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -14,13 +20,13 @@ body {
 header {
   background-color: #a17283;
   color: #fff;
-  padding: 10px;
+  padding: 4%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 150px;
+  height: 50px;
 }
 
 .admin-title {
@@ -32,7 +38,7 @@ header {
   text-transform: uppercase;
   padding-bottom: 10px;
   position: relative;
-  top: 70px;
+  top: 15px;
 }
 
 .user-info {
@@ -99,7 +105,7 @@ main.content {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 10px;
   padding: 0 20px;
 }
 
@@ -109,7 +115,7 @@ main.content {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -126,19 +132,65 @@ main.content {
 }
 
 .admin-card {
-  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Inter;
+  background-color: #ceadc0;
   border: 2px solid #7c5a68;
   border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  width: 150px;
+  padding: 25px;
+  text-align: left;
+  height: 40vh;
+  width: 50vw;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 90px;
+}
+
+.admin-card > img {
+    width: 15vw;
+    height: 32vh;
+    position: relative;
+    left: 20px;
+    top: 5px;
+}
+
+.org {
+    font: 24px;
+    height: 100%;
+    width: 80%;
+    text-align: center;
+}
+
+.org > p {
+    text-align: center;
+    background-color: white;
+}
+
+#informacoes {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    font-family: Inter;
+    font-weight: 600;
+    position: relative;
+    left: 60px;
+    height: 100%;
+    width: 70%;
+}
+
+#informacoes > p {
+    background-color: rgba(141, 91, 119, 0.9);
+    color: white;
+    width: 90%;
+    padding: 5px;
 }
 
 .admin-photo {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -162,8 +214,19 @@ main.content {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
+  /*margin-top: 20px;
+  margin-bottom: 30px;*/
+  position: relative;
+
+  top: 100px;
+  right: 35px;
 }
+
+/*#vbotao {
+  position: relative;
+  left: 60px;
+  width: 120px;
+}*/
 
 footer {
   background-color: #a17283;

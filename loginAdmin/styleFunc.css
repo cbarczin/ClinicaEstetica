@@ -166,6 +166,31 @@ main.content {
   margin-top: 20px;
 }
 
+  /* Estiliza o link como um botão */
+a {
+  text-decoration: none;            /* Remove o sublinhado padrão */
+  color: white;                     /* Define a cor do texto como branco */
+  background-color: #4CAF50;        /* Cor de fundo verde */
+  padding: 10px 20px;               /* Espaçamento interno (padding) */
+  border-radius: 5px;               /* Borda arredondada */
+  font-size: 16px;                  /* Tamanho da fonte */
+  display: inline-block;            /* Faz o link se comportar como um bloco */
+  text-align: center;               /* Alinha o texto ao centro */
+  cursor: pointer;                 /* Cursor de clique */
+  transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Efeito ao passar o mouse (hover) */
+a:hover {
+  background-color: #45a049;        /* Cor de fundo quando o mouse passa por cima */
+}
+
+/* Efeito ao clicar no link */
+a:active {
+  background-color: #3e8e41;        /* Cor de fundo quando o link é clicado */
+}
+
+
 footer {
   background-color: #a17283;
   color: #fff;

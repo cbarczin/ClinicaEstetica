@@ -20,7 +20,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 150px;
+  height: 250px;
 }
 
 .admin-title {
@@ -32,7 +32,7 @@ header {
   text-transform: uppercase;
   padding-bottom: 10px;
   position: relative;
-  top: 70px;
+  top: 20px;
 }
 
 .user-info {
@@ -131,8 +131,10 @@ main.content {
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  width: 150px;
+  width: 100%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 50px;
 }
 
 .admin-photo {
@@ -162,7 +164,8 @@ main.content {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
+  position: relative;
+  bottom: 30px;
 }
 
 footer {
