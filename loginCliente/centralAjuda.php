@@ -3,18 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../estilos/styleAutenticacao.css" />
+    <link rel="stylesheet" href="/clinicaestetica/estilos/styleCentralAjuda.css" />
     <title>Autenticação</title>
   </head>
   <body>
     <header>
       <div id="barraSuperior">
         <div id="logo">
-          <img
-            id="iconlogo"
-            src="../images/logo.png"
-            alt="Logo da CariocaBeauty"
-          />
+          <img id="iconlogo" src="../images/logo.png" alt="Logo da CariocaBeauty" />
           <p>CariocaBeauty</p>
         </div>
         <div id="busca">
@@ -39,9 +35,9 @@
           <button aria-label="Instagram">
             <img src="../images/instagram.png" alt="Ícone do Instagram" />
           </button>
-          <a href="/arquivoshtml/entrar.html" aria-label="Entrar"
-            ><img src="../images/entrar.png" alt="Ícone de entrar"
-          /></a>
+          <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar">
+            <img src="../images/entrar.png" alt="Ícone de entrar" />
+          </a>
           <button aria-label="Contato">
             <img src="../images/contato.png" alt="Ícone de contato" />
           </button>
@@ -49,48 +45,31 @@
       </div>
       <nav id="menuSuperior">
         <ul>
-          <li><a href="../loginCliente/clienteLogado.html">INÍCIO</a></li>
-          <li><a href="../loginCliente/sobreNos.html">SOBRE NÓS</a></li>
-          <li><a href="../loginCliente/servicos.html">SERVIÇOS</a></li>
-          <li><a href="#promocoes">PROMOÇÕES</a></li>
-          <li><a href="../loginCliente/equipe.html">EQUIPE</a></li>
-          <li><a href="#central-ajuda">CENTRAL DE AJUDA</a></li>
-          <li><a href="#agendar">AGENDAR</a></li>
+          <li><a href="/clinicaestetica/loginCliente/clienteLogado.php">INÍCIO</a></li>
+          <li><a href="/clinicaestetica/loginCliente/sobreNos.php">SOBRE NÓS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/servicos.php">SERVIÇOS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">PROMOÇÕES</a></li>
+          <li><a href="/clinicaestetica/loginCliente/equipe.php">EQUIPE</a></li>
+          <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">AGENDAR</a></li>
         </ul>
       </nav>
-      </nav>
     </header>
-    <main class="dados-pessoais">
-      <aside class="sidebar">
-        <div class="profile">
-          <img src="../images/alice.jpg" alt="Alana" class="profile-img" />
-          <h2>Olá, Alana!</h2>
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="#">Dados pessoais</a></li>
-            <li><a href="#">Endereço</a></li>
-            <li><a href="#">Autenticação</a></li>
-            <li><a href="#">Pedidos</a></li>
-            <li><a href="#">Sair</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <section class="content">
-        <a href="#" class="back-button">← Voltar</a>
-        <h1>Autenticação</h1>
-        <div class="auth-card">
-          <h2>Senha</h2>
-          <p>xxxxxxxxxxxx</p>
-          <a href="#" class="action-link">Redefinir senha</a>
-        </div>
-        <div class="auth-card">
-          <h2>Gerenciamento de Sessões</h2>
-          <p>Você tem 1 sessão ativa</p>
-          <a href="#" class="action-link">Ver Sessões</a>
-        </div>
-      </section>
-    </main>
+    <main class="help-section">
+    <div class="help-container">
+      <h2>Como podemos te ajudar?</h2>
+      <div class="input-area">
+        <input type="text" placeholder="Digite sua dúvida aqui" class="question-input">
+        <button class="ask-button">Perguntar</button>
+      </div>
+      <div class="contact-options">
+        <button class="contact-button email"><span>📧</span> E-mail</button>
+        <button class="contact-button whatsapp"><span>📱</span> WhatsApp</button>
+        <button class="contact-button phone"><span>📞</span> Telefone</button>
+      </div>
+    </div>
+  </main>
+
     <footer class="footer">
       <div class="footerConteudo">
         <div class="footer-logo">
@@ -108,13 +87,11 @@
           <p>Terça a sábado: 9h às 21h</p>
         </div>
         <div class="mapa">
-          <img
-            src="../images/mapaclinica.jpg"
-            alt="Mapa para chegar na clínica"
-          />
+          <img src="../images/mapaclinica.jpg" alt="Mapa para chegar na clínica" />
           <span>Rua Barão de Jaguaripe, 3454 – Ipanema</span>
         </div>
       </div>
     </footer>
+   
   </body>
 </html>

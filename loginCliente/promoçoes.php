@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../estilos/styleAdicionarEndereço.css" />
+    <link rel="stylesheet" href="/clinicaestetica/estilos/stylePromocoes.css" />
     <title>Adicionar Endereço</title>
   </head>
   <body>
@@ -39,7 +39,8 @@
           <button aria-label="Instagram">
             <img src="../images/instagram.png" alt="Ícone do Instagram" />
           </button>
-          <a href="/arquivoshtml/entrar.html" aria-label="Entrar"
+                   <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
+
             ><img src="../images/entrar.png" alt="Ícone de entrar"
           /></a>
           <button aria-label="Contato">
@@ -49,53 +50,62 @@
       </div>
       <nav id="menuSuperior">
         <ul>
-          <li><a href="../loginCliente/clienteLogado.html">INÍCIO</a></li>
-          <li><a href="../loginCliente/sobreNos.html">SOBRE NÓS</a></li>
-          <li><a href="../loginCliente/servicos.html">SERVIÇOS</a></li>
-          <li><a href="#promocoes">PROMOÇÕES</a></li>
-          <li><a href="../loginCliente/equipe.html">EQUIPE</a></li>
-          <li><a href="#central-ajuda">CENTRAL DE AJUDA</a></li>
-          <li><a href="#agendar">AGENDAR</a></li>
+          <li><a href="/clinicaestetica/loginCliente/clienteLogado.php">INÍCIO</a></li>
+          <li><a href="/clinicaestetica/loginCliente/sobreNos.php">SOBRE NÓS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/servicos.php">SERVIÇOS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">PROMOÇÕES</a></li>
+          <li><a href="/clinicaestetica/loginCliente/equipe.php">EQUIPE</a></li>
+          <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">AGENDAR</a></li>
         </ul>
       </nav>
     </header>
-    <main class="dados-pessoais">
-      <aside class="sidebar">
-        <div class="profile">
-          <img src="../images/alice.jpg" alt="Alana" class="profile-img" />
-          <h2>Olá, Alana!</h2>
+    <main>
+      <section class="services-header">
+     
+        <h2>PROMOÇÕES</h2>
+        <p>
+          Colocamos carinho e atenção em cada detalhe para oferecer não só o
+          melhor atendimento para as nossas clientes, como uma experiência
+          única, com uma crescente preocupação em cuidar também da natureza.
+        </p>
+      </section>
+      <section class="services-list">
+        <div class="service-item">
+          <img src="../images/corte.jpg" alt="Pacote 1" />
+          <p class="service-title">PACOTE 1</p>
+          <p class="service-description">Inclui corte e hidratação capilar.</p>
         </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="#">Dados pessoais</a></li>
-            <li><a href="#">Endereço</a></li>
-            <li><a href="#">Autenticação</a></li>
-            <li><a href="#">Pedidos</a></li>
-            <li><a href="#">Sair</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <section class="content">
-        <a href="#" class="back-button">← Endereço</a>
-        <h1>Adicionar endereço</h1>
-        <form class="address-form">
-          <div class="info">
-            <label for="pais">País</label>
-            <select id="pais">
-              <option value="brasil">Brasil</option>
-              <option value="argentina">Argentina</option>
-              <option value="outro">Outro</option>
-            </select>
-          </div>
-          <div class="info">
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" placeholder="Digite o CEP" />
-            <small class="help-text">Não sei meu CEP?</small>
-          </div>
-          <button type="submit" class="add-address-button">
-            Adicionar Endereço
-          </button>
-        </form>
+        <div class="service-item">
+          <img src="../images/pintar.jpg" alt="Pacote 2" />
+          <p class="service-title">PACOTE 2</p>
+          <p class="service-description">
+            Coloração e tratamento para cabelos.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="../images/escova.jpg" alt="Pacote 3" />
+          <p class="service-title">PACOTE 3</p>
+          <p class="service-description">
+            Escova modeladora com brilho intenso.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="../images/unhas.jpg" alt="Pacote 4" />
+          <p class="service-title">PACOTE 4</p>
+          <p class="service-description">
+            Tratamento capilar para cabelos crespos.
+          </p>
+        </div>
+        <div class="service-item">
+  <a href="/clinicaestetica/loginCliente/agendarConsulta.php" >
+    <img src="../images/maquiagem.jpg" alt="Pacote 5" />
+    <p class="service-title">PACOTE 5</p>
+    <p class="service-description">
+      Combo completo.
+    </p>
+  </a>
+</div>
       </section>
     </main>
     <footer class="footer">

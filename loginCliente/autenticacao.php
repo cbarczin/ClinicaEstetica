@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../estilos/styleClienteLogado.css" />
-    <title>Adicionar Endereço</title>
+    <link rel="stylesheet" href="/clinicaestetica../estilos/styleAutenticacao.css" />
+    <title>Autenticação</title>
   </head>
   <body>
     <header>
@@ -39,9 +39,9 @@
           <button aria-label="Instagram">
             <img src="../images/instagram.png" alt="Ícone do Instagram" />
           </button>
-          <a href="/arquivoshtml/entrar.html" aria-label="Entrar">
-            <img src="../images/entrar.png" alt="Ícone de entrar" />
-          </a>
+          <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
+            ><img src="../images/entrar.png" alt="Ícone de entrar"
+          /></a>
           <button aria-label="Contato">
             <img src="../images/contato.png" alt="Ícone de contato" />
           </button>
@@ -49,18 +49,51 @@
       </div>
       <nav id="menuSuperior">
         <ul>
-          <li><a href="../loginCliente/clienteLogado.html">INÍCIO</a></li>
-          <li><a href="../loginCliente/sobreNos.html">SOBRE NÓS</a></li>
-          <li><a href="../loginCliente/servicos.html">SERVIÇOS</a></li>
-          <li><a href="#promocoes">PROMOÇÕES</a></li>
-          <li><a href="../loginCliente/equipe.html">EQUIPE</a></li>
-          <li><a href="#central-ajuda">CENTRAL DE AJUDA</a></li>
-          <li><a href="#agendar">AGENDAR</a></li>
+          <li><a href="/clinicaestetica/loginCliente/clienteLogado.php">INÍCIO</a></li>
+          <li><a href="/clinicaestetica/loginCliente/sobreNos.php">SOBRE NÓS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/servicos.php">SERVIÇOS</a></li>
+          <li><a href="/clinicaestetica#promocoes">PROMOÇÕES</a></li>
+          <li><a href="/clinicaestetica/loginCliente/equipe.php">EQUIPE</a></li>
+          <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
+          <li><a href="/clinicaestetica#agendar">AGENDAR</a></li>
         </ul>
       </nav>
+      </nav>
     </header>
-    <main class="servicos">
-      <img src="../images/fotohome.png" alt="" />
+    <main class="dados-pessoais">
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="../images/alice.jpg" alt="Alana" class="profile-img" />
+          <h2>Olá, Alana!</h2>
+        </div>
+       <nav class="menu">
+          <ul>
+            <li>
+              <a href="/clinicaestetica/loginCliente/dadosCliente.php">Dados pessoais</a>
+            </li>
+            <li>
+              <a href="/clinicaestetica/loginCliente/visualizarEndereço.php">Endereço</a>
+            </li>
+            <li><a href="/clinicaestetica/loginCliente/autenticacao.php">Autenticação</a></li>
+            <li><a href="/clinicaestetica/loginCliente/meusAgendamentos.php">Pedidos</a></li>
+            <li><a href="/clinicaestetica/nologin/index.php">Sair</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="content">
+        <a href="/clinicaestetica#" class="back-button">← Voltar</a>
+        <h1>Autenticação</h1>
+        <div class="auth-card">
+          <h2>Senha</h2>
+          <p>xxxxxxxxxxxx</p>
+          <a href="/clinicaestetica#" class="action-link">Redefinir senha</a>
+        </div>
+        <div class="auth-card">
+          <h2>Gerenciamento de Sessões</h2>
+          <p>Você tem 1 sessão ativa</p>
+          <a href="/clinicaestetica#" class="action-link">Ver Sessões</a>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footerConteudo">
@@ -87,6 +120,5 @@
         </div>
       </div>
     </footer>
-    <script src="/javascript/servicos.js"></script>
   </body>
 </html>

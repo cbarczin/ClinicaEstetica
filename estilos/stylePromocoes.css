@@ -135,6 +135,9 @@ nav ul li a {
   height: auto;
 }
 
+main {
+  margin: 30px;
+}
 .contact-info,
 .horario,
 .mapa {
@@ -176,136 +179,75 @@ nav ul li a {
 .footer-column:last-child {
   text-align: right;
 }
-
-main.dados-pessoais {
-  display: flex;
-  padding: 20px;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #f3dce4;
-  border-radius: 10px;
-  padding: 20px;
-  margin-right: 20px;
-}
-
-.profile {
+.services-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.profile-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.services-header .back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #8b5d74;
+  cursor: pointer;
+}
+
+.services-header h2 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.profile h2 {
-  font-size: 18px;
+.services-header p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
 }
 
-.menu ul {
-  margin-top: 40px;
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.menu ul li a {
+/* Lista de Serviços */
+.services-list {
   text-decoration: none;
-  color: #8b5d74;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.menu ul li a:hover {
-  background-color: #e8c8d2;
-}
-
-.content {
-  flex: 1;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.content h1 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #8b5d74;
-}
-
-.details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.column {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.info label {
-  font-size: 14px;
-  color: #8b5d74;
-}
-
-.info input {
-  padding: 10px;
-  border: 2px solid #8b5d74;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.edit-button {
-  grid-column: span 2;
-  align-self: center;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background-color: #8b5d74;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  font-size: 14px;
-  cursor: pointer;
+.service-item {
+  text-decoration: none;
   text-align: center;
-  transition: background-color 0.3s ease;
+  width: 150px; /* Define uma largura consistente */
+}
+
+.service-item img {
+  text-decoration: none;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
 }
 
-.edit-button:hover {
-  background-color: #a75e80;
-}
-
-.submit-button {
-  display: block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-  background-color: #8b5d74;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
+.service-description {
   text-decoration: none;
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+.service-item a {
+  text-decoration: none;
+  color: inherit; /* Opcional: para herdar a cor do texto ao invés de azul padrão */
 }
 
-.submit-button:hover {
-  background-color: #a75e80;
+.service-item a:hover {
+  text-decoration: none;
 }

@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../estilos/styleSobreNos.css" />
+    <link rel="stylesheet" href="/clinicaestetica../estilos/styleSobreNos.css" />
     <title>Clínica Estética</title>
   </head>
   <body>
@@ -39,7 +41,8 @@
           <button aria-label="Instagram">
             <img src="../images/instagram.png" alt="Ícone do Instagram" />
           </button>
-          <a href="/arquivoshtml/entrar.html" aria-label="Entrar"
+                   <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
+
             ><img src="../images/entrar.png" alt="Ícone de entrar"
           /></a>
           <button aria-label="Contato">
@@ -49,13 +52,13 @@
       </div>
       <nav id="menuSuperior">
         <ul>
-          <li><a href="../loginCliente/clienteLogado.html">INÍCIO</a></li>
-          <li><a href="../loginCliente/sobreNos.html">SOBRE NÓS</a></li>
-          <li><a href="../loginCliente/servicos.html">SERVIÇOS</a></li>
-          <li><a href="#promocoes">PROMOÇÕES</a></li>
-          <li><a href="../loginCliente/equipe.html">EQUIPE</a></li>
-          <li><a href="#central-ajuda">CENTRAL DE AJUDA</a></li>
-          <li><a href="#agendar">AGENDAR</a></li>
+          <li><a href="/clinicaestetica/loginCliente/clienteLogado.php">INÍCIO</a></li>
+          <li><a href="/clinicaestetica/loginCliente/sobreNos.php">SOBRE NÓS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/servicos.php">SERVIÇOS</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">PROMOÇÕES</a></li>
+          <li><a href="/clinicaestetica/loginCliente/equipe.php">EQUIPE</a></li>
+          <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">AGENDAR</a></li>
         </ul>
       </nav>
     </header>
@@ -113,7 +116,7 @@
           </div>
         </div>
         <div class="button-container">
-          <a href="#time" class="button">CONHEÇA NOSSO TIME</a>
+          <a href="/clinicaestetica#time" class="button">CONHEÇA NOSSO TIME</a>
         </div>
       </main>
     </main>
