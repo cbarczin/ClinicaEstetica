@@ -169,7 +169,7 @@ main.content {
 }
 
 #informacoes {
-    font-size: 24px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     font-family: Inter;
