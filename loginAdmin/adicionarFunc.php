@@ -66,46 +66,32 @@ $conn->close();
     <title>Cadastro de Funcionário</title>
 </head>
 <body>
-    <main>
-        <section>
-            <form action="" method="post">
-                <h2>Cadastre um novo funcionário</h2>
-                <label for="nome">Nome: </label>    
-                <input type="text" id="nome" name="nome" required>
-                <br>
+    <section style="height: 56vh;">
+    <form action="" method="post">
+    <label>Cadastre um novo funcionário</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+        <br>
 
-                <label for="contato">Contato: </label>
-                <input type="text" id="contato" name="contato" required>
-                <br>
+        <input type="text" id="contato" name="contato" placeholder="Contato" required>
+        <br>
 
-                <label for="servicos">Serviço: </label>
-                <input type="text" id="servicos" name="servicos" required>
-                <br>
+        <input type="text" id="servicos" name="servicos" placeholder="Servicos" required>
+        <br>
 
-                <label for="horarios">Horários: </label>
-                <input type="text" id="horarios" name="horarios" required>
-                <br>
+        <input type="text" id="horarios" name="horarios" placeholder="Horarios" required>
+        <br>
 
-                <label for="dias">Dias: </label>
-                <input type="text" id="dias" name="dias" required>
-                <br>
+        <input type="text" id="dias" name="dias" placeholder="Dias" required>
+        <br>
 
-                <label for="salario">Salário: </label>
-                <input type="number" id="salario" name="salario" required>
-                <br>
-
-                <div style="width: 100%; display: flex; justify-content: center; position: relative; left: 0;">
-                    <a width="2%" href="./funcionarios.php">
-                        <img width="25%" src="../images/setavoltar.png" alt="Voltar">
-                    </a>
-                    <input type="submit" value="Cadastrar" id="enviar">
-                </div>
-
+        <input type="number" id="salario" name="salario" placeholder="Salario" required>
+        <br>
+        <input type="submit" value="Cadastrar" id="enviar">
                 <?php if (!empty($mensagem)): ?>
                     <p><?php echo $mensagem; ?></p>
                 <?php endif; ?>
             </form>
         </section>
-    </main>
+        <a href="./funcionarios.php"><button class="add-admin-btn" id="vbotao">Voltar</button></a>
 </body>
 </html>

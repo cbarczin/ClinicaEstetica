@@ -58,7 +58,10 @@ $result = $conn->query($sql);
         }
         ?>
       </section>
-      <button  class="add-admin-btn" onclick="window.location.href='excluirServico.php';">Excluir Serviço</button>
+      <div style="width: 50%;">
+      <button  class="add-admin-btn" onclick="window.location.href='adicionarServico.php';">Adicionar Serviço</button>
+      <button  style="width: 19%; background-color: #fc6a6a;" class="add-admin-btn" onclick="window.location.href='excluirServico.php';">Excluir Serviço</button>
+      </div>
       </main>
 
     <footer>

@@ -57,7 +57,10 @@ $result = $conn->query($sql);
         }
         ?>
       </section>
+      <div style="width: 55%;">
       <button class="add-admin-btn" onclick="window.location.href='./adicionarFunc.php'">Cadastro de Funcionarios</button>
+      <button  style="width: 23%; background-color: #fc6a6a;"class="add-admin-btn" onclick="window.location.href='./excluirFunc.php'">Excluir Funcionarios</button>
+      </div>
       </main>
 
     <footer>
@@ -70,6 +73,5 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-// Fechar a conexão
 $conn->close();
 ?>

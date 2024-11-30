@@ -61,7 +61,7 @@
   <body>
     <section>
     <form action="" method="post">
-      <label for="servico">Digite o nome do serviço que deseja excluir: </label>
+      <label for="servico">Excluir Serviço</label>
       <input type="text" id="servico" name="servico" required>
       <input type="submit" value="Excluir Serviço">
     </form>
