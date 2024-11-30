@@ -56,7 +56,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
             <button><img src="../images/local.png" alt="local"></button>            
             <button><img src="../images/compras.png" alt="compras"></button>               
             <button><img src="../images/instagram.png" alt="instagram"></button>            
-            <a href="./entrar.html"><button><img src="../images/entrar.png" alt="entrar"></button>
+            <a href="./entrar.html"><button><img src="../images/entrar1.png" alt="entrar"></button>
             </a>
             
             <button><img src="../images/contato.png" alt="contato"></button>

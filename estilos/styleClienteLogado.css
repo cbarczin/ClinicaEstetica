@@ -9,6 +9,7 @@ body {
   font-family: Inter, sans-serif;
   background-color: #f8e6ef;
   color: #8b5d74;
+  overflow-x: hidden;
 }
 
 header {

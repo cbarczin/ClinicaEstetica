@@ -1,22 +1,21 @@
 <?php
-// Configurações do banco de dados
+
 $servername = "localhost";
 $usuario = "root";
 $senha = "";
 $dbname = "clinicaestetica";
 
-// Criar conexão
+
 $conn = new mysqli($servername, $usuario, $senha, $dbname);
 
-// Verificar conexão
+
 if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
 }
 
-// ID do usuário (Substituir por um método seguro para obter o ID do usuário logado)
-$usuario_id = 1; // Exemplo: ID fixo, pode ser ajustado conforme sua lógica de login
 
-// Consulta SQL para buscar os agendamentos do usuário
+$usuario_id = 1; 
+
 $sql = "SELECT data, hora, servico, valor, status_pagamento 
         FROM agendamentos 
         WHERE usuario_id = $usuario_id 
@@ -30,7 +29,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/clinicaestetica../estilos/styleConfirmarPagamento.css">
+    <link rel="stylesheet" href="/clinicaestetica/estilos/styleVisualizarEndereco.css">
     <title>Meus Agendamentos</title>
 </head>
 <body>
@@ -87,13 +86,30 @@ $result = $conn->query($sql);
       </nav>
       </nav>
     </header>
-    <main class="main">
-        <h1>Meus Agendamentos</h1>
+      <main class="dados-pessoais">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="../images/alice.jpg" alt="Alana" class="profile-img" />
+        <h2>Olá, Alana!</h2>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="/clinicaestetica/loginCliente/dadosCliente.php">Dados pessoais</a></li>
+          <li><a href="/clinicaestetica/loginCliente/visualizarEndereço.php">Endereço</a></li>
+          <li><a href="/clinicaestetica/loginCliente/autenticacao.php">Autenticação</a></li>
+            <li><a href="/clinicaestetica/loginCliente/meusAgendamentos.php">Pedidos</a></li>
+            <li><a href="/clinicaestetica/loginCliente/clienteDeslogado.html">Sair</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="content">
+      
+      <h1>Meus Agendamentos</h1>
         <div class="appointment-list">
             <?php
             if ($result->num_rows > 0) {
-                // Exibir cada agendamento
-                while ($row = $result->fetch_assoc()) {
+
+              while ($row = $result->fetch_assoc()) {
                     echo "<div class='appointment-item'>";
                     echo "<p><strong>Data:</strong> " . date("d/m/Y", strtotime($row['data'])) . "</p>";
                     echo "<p><strong>Hora:</strong> " . date("H:i", strtotime($row['hora'])) . "</p>";
@@ -107,7 +123,9 @@ $result = $conn->query($sql);
             }
             ?>
         </div>
-    </main>
+    </section>
+  </main>
+   
    <footer class="footer">
     <div class="footerConteudo">
       <div class="footer-logo">
@@ -134,6 +152,6 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-// Fechar conexão
+
 $conn->close();
 ?>

@@ -41,7 +41,7 @@
           <button aria-label="Instagram">
             <img src="../images/instagram.png" alt="Ícone do Instagram" />
           </button>
-                   <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
+                  <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
 
             ><img src="../images/entrar.png" alt="Ícone de entrar"
           /></a>
@@ -116,7 +116,7 @@
           </div>
         </div>
         <div class="button-container">
-          <a href="/clinicaestetica#time" class="button">CONHEÇA NOSSO TIME</a>
+          <a href="./equipe.php" class="button">CONHEÇA NOSSO TIME</a>
         </div>
       </main>
     </main>
