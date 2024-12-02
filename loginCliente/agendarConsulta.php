@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/clinicaestetica/estilos/styleAgendarConsulta.css" />
-    <title>Autenticação</title>
+    <link rel="stylesheet" href="/clinicaestetica/estilos/styleAgendarConsulta2.css" />
+    <title>Agendar Consulta</title>
   </head>
   <body>
     <header>
@@ -15,12 +15,7 @@
         </div>
         <div id="busca">
           <label for="campo-busca" class="sr-only"></label>
-          <input
-            type="text"
-            id="campo-busca"
-            placeholder="FAÇA SUA BUSCA AQUI"
-            aria-label="Busca"
-          />
+          <input type="text" id="campo-busca" placeholder="FAÇA SUA BUSCA AQUI" aria-label="Busca" />
           <button aria-label="Pesquisar">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -56,49 +51,32 @@
       </nav>
     </header>
     <main>
-      <!-- Perfil ao lado esquerdo -->
       <section class="profile">
         <img src="../images/marcela.jpg" alt="MarcelaM" class="profile-img" />
         <h2>MarcelaM</h2>
         <p>Corte<br />Coloração<br />Maquiagem<br />Design de sobrancelhas</p>
       </section>
 
-      <!-- Conteúdo ao lado direito -->
       <section class="content">
         <div class="calendar">
           <h2>AGENDA</h2>
-          <div class="calendar-grid" id="calendar-grid">
-            <!-- Dias serão gerados dinamicamente -->
+          <div class="calendar-navigation">
+            <button id="prev-month">Anterior</button>
+            <span id="selected-month"></span>
+            <span id="selected-year"></span>
+            <button id="next-month">Próximo</button>
           </div>
-          <div class="time-slots">
-            <button class="time-btn">9h</button>
-            <button class="time-btn">10h</button>
-            <button class="time-btn">12h</button>
-            <button class="time-btn">14h</button>
-            <button class="time-btn">16h</button>
-            <button class="time-btn">17h</button>
-          </div>
+          <div id="calendar-grid"></div>
+          <h3>Selecione um Horário</h3>
+          <div id="time-slot-container"></div>
         </div>
-        <div class="services">
-          <div class="service">
-            <img src="../images/corte.jpg" alt="Corte" />
-            <img src="../images/pintar.jpg" alt="Corte" />
-            <img src="../images/unhas.jpg" alt="Corte" />
-            <img src="../images/maquiagem.jpg" alt="Corte" />
-          </div>
-          <div>
-            <p>Corte + Coloração + Unhas + Maquiagem</p>
-            <p>R$545,00</p>
-            <p>Desconto de 10%: <b>R$490,50</b></p>
-          </div>
-        </div>
-        <form id="payment-form">
+        <form id="payment-form" action="/clinicaestetica/loginCliente/agendar.php" method="POST">
           <input type="hidden" name="usuario_id" value="1" />
           <input type="hidden" name="data" id="dataSelecionada" />
           <input type="hidden" name="hora" id="horaSelecionada" />
           <input type="hidden" name="servico" value="Corte + Coloração + Unhas + Maquiagem" />
           <input type="hidden" name="valor" value="490.50" />
-          <button id="confirm-btn" type="button">Confirmar Pagamento</button>
+          <button id="confirm-btn" class="botaoConfirmar" type="button">Confirmar Pagamento</button>
         </form>
       </section>
     </main>
@@ -125,66 +103,91 @@
         </div>
       </div>
     </footer>
-    <form action="confirmarpagamento.php" method="POST">
-    <input type="hidden" name="usuario_id" value="1"> <!-- ID do usuário logado -->
-    <input type="hidden" name="data" id="dataSelecionada">
-    <input type="hidden" name="hora" id="horaSelecionada">
-    <input type="hidden" name="servico" value="Corte + Coloração + Unhas + Maquiagem">
-    <input type="hidden" name="valor" value="490.50">
-    
-</form>
 
-<script>
-  // Atualiza o campo de hora ao clicar em um botão de horário
-  document.querySelectorAll(".time-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.getElementById("horaSelecionada").value = btn.textContent.trim();
-    });
-  });
+    <script>
+      const calendarGrid = document.getElementById("calendar-grid");
+      const selectedMonthElement = document.getElementById("selected-month");
+      const selectedYearElement = document.getElementById("selected-year");
+      const timeSlotContainer = document.getElementById("time-slot-container");
 
-  // Define a data selecionada dinamicamente
-  document.getElementById("dataSelecionada").value = "2024-11-26";
+      let currentDate = new Date();
+      let currentYear = currentDate.getFullYear();
+      let currentMonth = currentDate.getMonth();
 
-  // Redireciona ao clicar em Confirmar Pagamento
-  document.getElementById("confirm-btn").addEventListener("click", async () => {
-    const usuarioId = document.querySelector('[name="usuario_id"]').value;
-    const dataSelecionada = document.getElementById("dataSelecionada").value;
-    const horaSelecionada = document.getElementById("horaSelecionada").value;
-    const servico = document.querySelector('[name="servico"]').value;
-    const valor = document.querySelector('[name="valor"]').value;
+      const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+      const timeSlots = ["9h", "10h", "14h", "15h", "16h"];
 
-    if (dataSelecionada && horaSelecionada) {
-      try {
-        const response = await fetch('/clinicaestetica/loginCliente/agendar.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            usuario_id: usuarioId,
-            data: dataSelecionada,
-            hora: horaSelecionada,
-            servico: servico,
-            valor: valor,
-          }),
-        });
+      function generateCalendar(year, month) {
+        calendarGrid.innerHTML = "";
 
-        if (response.ok) {
-          window.location.href = "/clinicaestetica/loginCliente/meusAgendamentos.php";
-        } else {
-          alert("Erro ao confirmar o pagamento. Tente novamente.");
+        selectedMonthElement.textContent = months[month];
+        selectedYearElement.textContent = year;
+
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        for (let i = 1; i <= daysInMonth; i++) {
+          const dayBtn = document.createElement("button");
+          dayBtn.textContent = i;
+          dayBtn.classList.add("calendar-day");
+          dayBtn.addEventListener("click", () => {
+            document.querySelectorAll(".calendar-day").forEach((btn) => btn.classList.remove("active"));
+            dayBtn.classList.add("active");
+
+            const selectedDate = new Date(year, month, i).toISOString().split("T")[0];
+            document.getElementById("dataSelecionada").value = selectedDate;
+          });
+          calendarGrid.appendChild(dayBtn);
         }
-      } catch (error) {
-        alert("Ocorreu um erro ao processar sua solicitação. Por favor, tente novamente.");
-        console.error(error);
       }
-    } else {
-      alert("Por favor, selecione uma data e hora.");
-    }
-  });
-</script>
 
+      function generateTimeSlots() {
+        timeSlotContainer.innerHTML = "";
+        timeSlots.forEach((time) => {
+          const timeBtn = document.createElement("button");
+          timeBtn.textContent = time;
+          timeBtn.classList.add("time-btn");
+          timeBtn.addEventListener("click", () => {
+            document.querySelectorAll(".time-btn").forEach((btn) => btn.classList.remove("active"));
+            timeBtn.classList.add("active");
 
+            document.getElementById("horaSelecionada").value = time;
+          });
+          timeSlotContainer.appendChild(timeBtn);
+        });
+      }
 
-</script>
-     <script src="../javascript/agendarConsulta.js"></script>
+      document.getElementById("prev-month").addEventListener("click", () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        generateCalendar(currentYear, currentMonth);
+      });
+
+      document.getElementById("next-month").addEventListener("click", () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        generateCalendar(currentYear, currentMonth);
+      });
+
+      document.getElementById("confirm-btn").addEventListener("click", () => {
+        const selectedDay = document.getElementById("dataSelecionada").value;
+        const selectedTime = document.getElementById("horaSelecionada").value;
+
+        if (selectedDay && selectedTime) {
+          alert(`Horário confirmado: Dia ${selectedDay} às ${selectedTime}`);
+          document.getElementById("payment-form").submit();
+        } else {
+          alert("Por favor, selecione uma data e um horário.");
+        }
+      });
+
+      generateCalendar(currentYear, currentMonth);
+      generateTimeSlots();
+    </script>
   </body>
 </html>
