@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/clinicaestetica/estilos/styleVisualizarEndereco.css">
+    <link rel="stylesheet" href="/clinicaestetica/estilos/styleMeusAgendamentos.css">
     <title>Meus Agendamentos</title>
 </head>
 <body>
@@ -78,10 +78,10 @@ $result = $conn->query($sql);
           <li><a href="/clinicaestetica/loginCliente/clienteLogado.php">INÍCIO</a></li>
           <li><a href="/clinicaestetica/loginCliente/sobreNos.php">SOBRE NÓS</a></li>
           <li><a href="/clinicaestetica/loginCliente/servicos.php">SERVIÇOS</a></li>
-          <li><a href="/clinicaestetica#promocoes">PROMOÇÕES</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">PROMOÇÕES</a></li>
           <li><a href="/clinicaestetica/loginCliente/equipe.php">EQUIPE</a></li>
           <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
-          <li><a href="/clinicaestetica#agendar">AGENDAR</a></li>
+          <li><a href="/clinicaestetica/loginCliente/promoçoes.php">AGENDAR</a></li>
         </ul>
       </nav>
       </nav>
@@ -98,7 +98,7 @@ $result = $conn->query($sql);
           <li><a href="/clinicaestetica/loginCliente/visualizarEndereço.php">Endereço</a></li>
           <li><a href="/clinicaestetica/loginCliente/autenticacao.php">Autenticação</a></li>
             <li><a href="/clinicaestetica/loginCliente/meusAgendamentos.php">Pedidos</a></li>
-            <li><a href="/clinicaestetica/loginCliente/clienteDeslogado.html">Sair</a></li>
+            <li><a href="/clinicaestetica/loginCliente/clienteDeslogado.php">Sair</a></li>
         </ul>
       </nav>
     </aside>
