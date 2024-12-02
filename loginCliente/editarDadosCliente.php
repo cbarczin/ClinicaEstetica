@@ -86,7 +86,7 @@
             <li><a href="/clinicaestetica/loginCliente/visualizarEndereço.php">Endereço</a></li>
             <li><a href="/clinicaestetica/loginCliente/autenticacao.php">Autenticação</a></li>
             <li><a href="clinicaestetica/loginCliente/meusAgendamentos.php">Pedidos</a></li>
-            <li><a href="/clinicaestetica/nologin/index.php">Sair</a></li>
+            <li><a href="/clinicaestetica/nologin/index.html">Sair</a></li>
           </ul>
         </nav>
       </aside>
