@@ -33,7 +33,7 @@ $result = $conn->query($sql);
     <title>Meus Agendamentos</title>
 </head>
 <body>
-       <header>
+      <header>
       <div id="barraSuperior">
         <div id="logo">
           <img
@@ -125,8 +125,7 @@ $result = $conn->query($sql);
         </div>
     </section>
   </main>
-   
-   <footer class="footer">
+  <footer class="footer">
     <div class="footerConteudo">
       <div class="footer-logo">
         <img src="../images/logo.png" alt="Logo CariocaBeauty" />
@@ -152,6 +151,5 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-
 $conn->close();
 ?>

@@ -1,21 +1,16 @@
 <?php
-// Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Conectar ao banco de dados
     $servername = "localhost";
     $usuario = "root";
     $senha = "";
     $dbname = "clinicaestetica";
 
-    // Criar conexão
     $conn = new mysqli($servername, $usuario, $senha, $dbname);
 
-    // Verificar conexão
     if ($conn->connect_error) {
         die("Erro na conexão: " . $conn->connect_error);
     }
 
-    // Coleta os dados do formulário
     $rua = $_POST['rua'];
     $bairro = $_POST['bairro'];
     $cidade = $_POST['cidade'];
@@ -23,20 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pais = $_POST['pais'];
     $cep = $_POST['cep'];
 
-    // Consulta SQL para inserir os dados no banco de dados
     $sql = "INSERT INTO enderecos (rua, bairro, cidade, estado, pais, cep) 
             VALUES ('$rua', '$bairro', '$cidade', '$estado', '$pais', '$cep')";
 
-    // Verificar se a inserção foi bem-sucedida
     if ($conn->query($sql) === TRUE) {
-        // Redireciona para a página de visualização de endereços
         header("Location: /clinicaestetica/loginCliente/visualizarEndereço.php");
         exit();
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }
 
-    // Fechar conexão
     $conn->close();
 }
 ?>
@@ -105,7 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="content">
       <h1>Adicionar Novo Endereço</h1>
       
-      <!-- Formulário para adicionar endereço -->
       <form method="POST" action="">
         <label for="rua">Rua:</label>
         <input type="text" id="rua" name="rua" required>
@@ -129,23 +119,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
 
       <?php
-      // Conectar ao banco de dados (substitua as configurações com as suas)
       $servername = "localhost";
       $usuario = "root";
       $senha = "";
       $dbname = "clinicaestetica";
 
-      // Criar conexão
       $conn = new mysqli($servername, $usuario, $senha, $dbname);
 
-      // Verificar conexão
       if ($conn->connect_error) {
           die("Erro na conexão: " . $conn->connect_error);
       }
 
-      // Verificar se o formulário foi enviado
       if (isset($_POST['submit'])) {
-          // Obter os dados do formulário
           $rua = $_POST['rua'];
           $bairro = $_POST['bairro'];
           $cidade = $_POST['cidade'];
@@ -153,7 +138,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $pais = $_POST['pais'];
           $cep = $_POST['cep'];
 
-          // Inserir os dados no banco
           $sql = "INSERT INTO enderecos (rua, bairro, cidade, estado, pais, cep) 
                   VALUES ('$rua', '$bairro', '$cidade', '$estado', '$pais', '$cep')";
 
@@ -164,7 +148,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           }
       }
 
-      // Fechar conexão
       $conn->close();
       ?>
 

@@ -1,5 +1,4 @@
 <?php
-// Conectar ao banco de dados
 $servername = "localhost";
 $usuario = "root";
 $senha = "";
@@ -7,21 +6,17 @@ $dbname = "clinicaestetica";
 
 $conn = new mysqli($servername, $usuario, $senha, $dbname);
 
-// Verificar conexão
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
 
-// Verificar se o ID do endereço foi passado pela URL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Buscar o endereço com base no ID
     $sql = "SELECT * FROM enderecos WHERE id = $id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Exibir os dados no formulário
         $row = $result->fetch_assoc();
         $rua = $row['rua'];
         $bairro = $row['bairro'];
@@ -38,9 +33,7 @@ if (isset($_GET['id'])) {
     exit();
 }
 
-// Atualizar os dados se o formulário for enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obter os valores do formulário
     $rua = $_POST['rua'];
     $bairro = $_POST['bairro'];
     $cidade = $_POST['cidade'];
@@ -48,11 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pais = $_POST['pais'];
     $cep = $_POST['cep'];
 
-    // Atualizar o endereço no banco de dados
     $sql = "UPDATE enderecos SET rua = '$rua', bairro = '$bairro', cidade = '$cidade', estado = '$estado', pais = '$pais', cep = '$cep' WHERE id = $id";
 
     if ($conn->query($sql) === TRUE) {
-        // Redirecionar para a página de visualização de endereços
         header('Location: visualizarEndereço.php');
         exit();
     } else {
@@ -163,8 +154,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </footer>
 
     <?php
-// Fechar conexão
 $conn->close();
 ?>
-
-    

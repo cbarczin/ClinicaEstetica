@@ -1,5 +1,4 @@
 <?php
-// Configuração do banco de dados
 $host = 'localhost';
 $dbname = 'clinicaestetica';
 $user = 'root';
@@ -40,7 +39,6 @@ try {
             ':valor' => $valor,
         ]);
 
-        // Redirecionar para a página de "Meus Agendamentos"
         header('Location: /clinicaestetica/loginCliente/meusAgendamentos.php');
         exit;
     } else {

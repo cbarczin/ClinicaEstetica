@@ -1,5 +1,4 @@
 <?php
-// Conectar ao banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,17 +6,13 @@ $dbname = "usuario_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar a conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Variável para armazenar a mensagem
 $mensagem = "";
 
-// Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Receber os dados do formulário
     $nome = $_POST['nome'];
     $contato = $_POST['contato'];
     $servicos = $_POST['servicos'];
@@ -25,25 +20,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dias = $_POST['dias'];
     $salario = $_POST['salario'];
 
-    // Validar campos não vazios
     if (!empty($nome) && !empty($contato) && !empty($servicos) && !empty($horarios) && !empty($dias) && !empty($salario)) {
-        // Preparar a consulta SQL para inserir o novo funcionário
         $sql = "INSERT INTO funcionarios (nome, contato, servicos, horarios, dias, salario)
                 VALUES (?, ?, ?, ?, ?, ?)";
 
-        // Preparar a consulta
         if ($stmt = $conn->prepare($sql)) {
-            // Vincular os parâmetros à consulta
             $stmt->bind_param("sssssd", $nome, $contato, $servicos, $horarios, $dias, $salario);
 
-            // Executar a consulta
             if ($stmt->execute()) {
                 $mensagem = "Novo funcionário cadastrado com sucesso!";
             } else {
                 $mensagem = "Erro ao cadastrar funcionário: " . $stmt->error;
             }
 
-            // Fechar a declaração
             $stmt->close();
         } else {
             $mensagem = "Erro na preparação da consulta: " . $conn->error;
@@ -53,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Fechar a conexão
 $conn->close();
 ?>
 

@@ -61,7 +61,6 @@
         <p><strong>Total:</strong> R$490,50</p>
       </section>
 
-      <!-- Formulário de confirmação de pagamento -->
       <form action="confirmarpagamento.php" method="POST">
         <input type="hidden" name="usuario_id" value="1" />
         <input type="hidden" name="data" id="dataSelecionada" />
@@ -69,7 +68,6 @@
         <input type="hidden" name="servico" value="Corte + Coloração + Unhas + Maquiagem" />
         <input type="hidden" name="valor" value="490.50" />
 
-        <!-- Escolha de pagamento -->
         <section class="payment-method">
           <h2>Escolha a Forma de Pagamento</h2>
           <div class="payment-options">
@@ -79,7 +77,6 @@
             </label>
           </div>
 
-          <!-- Formulário para PIX -->
           <div id="pix-form" class="payment-form">
             <p>Use o QR Code abaixo para realizar o pagamento via PIX:</p>
             <img src="../images/qrCode.png" alt="QR Code para pagamento PIX" />
@@ -90,7 +87,6 @@
         </section>
       </form>
 
-      <!-- Mensagem de confirmação -->
       <div id="confirmation-message" style="display: none; text-align: center">
         <h2>Pagamento Confirmado!</h2>
         <p>Seu pagamento foi processado com sucesso. Obrigado!</p>
@@ -122,7 +118,6 @@
     </footer>
 
     <script>
-      // Exemplo: Defina data e hora dinamicamente
       document.getElementById('dataSelecionada').value = '2024-11-26';
       document.getElementById('horaSelecionada').value = '10h';
     </script>

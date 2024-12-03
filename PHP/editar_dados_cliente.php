@@ -1,8 +1,7 @@
 <?php
-// Conexão com o banco de dados
 $host = "localhost";
 $usuario = "root";
-$senha = ""; // Substitua pela senha do seu banco
+$senha = "";
 $banco = "nome_do_seu_banco";
 
 $conexao = new mysqli($host, $usuario, $senha, $banco);
@@ -11,7 +10,6 @@ if ($conexao->connect_error) {
     die("Erro na conexão: " . $conexao->connect_error);
 }
 
-// Receber os dados do formulário
 $nome = $_POST['nome'];
 $sobrenome = $_POST['sobrenome'];
 $email = $_POST['email'];
@@ -20,8 +18,7 @@ $genero = $_POST['genero'];
 $telefone = $_POST['telefone'];
 $data_nascimento = $_POST['data_nascimento'];
 
-// Exemplo: Atualizar os dados do cliente com ID 1 (pode ser dinâmico)
-$cliente_id = 1; // Substitua pelo ID do cliente atual
+$cliente_id = 1;
 
 $sql = "UPDATE clientes 
         SET nome = ?, sobrenome = ?, email = ?, cpf = ?, genero = ?, telefone = ?, data_nascimento = ?

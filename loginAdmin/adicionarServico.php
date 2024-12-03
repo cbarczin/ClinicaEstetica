@@ -1,47 +1,37 @@
 <?php
-// Conectar ao banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "usuario_db";
 
-// Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Variável para armazenar a mensagem
 $mensagem = "";
 
-// Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servico = $_POST['servico']; // Recebe o nome do serviço que o usuário quer adicionar
+    $servico = $_POST['servico']; 
 
-    // Verificar se o nome do serviço foi fornecido
     if (!empty($servico)) {
-        // Preparar a consulta para inserir o novo serviço
         $sql = "INSERT INTO servicos (servico) VALUES (?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $servico); // Bind do parâmetro para a consulta SQL
+        $stmt->bind_param("s", $servico);
         
-        // Executar a consulta
         if ($stmt->execute()) {
             $mensagem = "Serviço '$servico' adicionado com sucesso!";
         } else {
             $mensagem = "Erro ao adicionar serviço: " . $stmt->error;
         }
 
-        // Fechar a declaração
         $stmt->close();
     } else {
         $mensagem = "Por favor, forneça o nome do serviço!";
     }
 }
 
-// Fechar a conexão com o banco
 $conn->close();
 ?>
 

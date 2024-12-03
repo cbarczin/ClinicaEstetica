@@ -1,19 +1,15 @@
 <?php
-// Conectar ao banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "usuario_db";
 
-// Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar se a conexão foi bem-sucedida
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Consultar todos os serviços
 $sql = "SELECT servico FROM servicos";
 $result = $conn->query($sql);
 ?>
@@ -44,9 +40,7 @@ $result = $conn->query($sql);
     <main class="content">
       <section class="admin-cards">
         <?php
-        // Verificar se há resultados
         if ($result->num_rows > 0) {
-            // Gerar um cartão para cada serviço
             while($row = $result->fetch_assoc()) {
                 echo '<div class="admin-card">';
                 echo '<p>' . $row['servico'] . '</p>';
@@ -74,6 +68,5 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-// Fechar a conexão
 $conn->close();
 ?>

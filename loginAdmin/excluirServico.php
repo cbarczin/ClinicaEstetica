@@ -1,38 +1,31 @@
 <?php
-    // Conectar ao banco de dados
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "usuario_db";
 
-    // Criar conexão
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Verificar conexão
     if ($conn->connect_error) {
         die("Conexão falhou: " . $conn->connect_error);
     }
 
-    // Verificar se o formulário foi enviado
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $servico = $_POST['servico']; // Recebe o nome do serviço que o usuário quer excluir
+        $servico = $_POST['servico'];
 
-        // Preparar a consulta para verificar se o serviço existe
         $sql = "SELECT id FROM servicos WHERE servico = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $servico); // Bind do parâmetro para a consulta SQL
+        $stmt->bind_param("s", $servico);
         $stmt->execute();
         $result = $stmt->get_result();
 
-        // Se o serviço existir, exclui-o
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $id_servico = $row['id'];
 
-            // Excluir o serviço
             $delete_sql = "DELETE FROM servicos WHERE id = ?";
             $delete_stmt = $conn->prepare($delete_sql);
-            $delete_stmt->bind_param("i", $id_servico); // Passa o id para excluir
+            $delete_stmt->bind_param("i", $id_servico); 
             if ($delete_stmt->execute()) {
                 echo "<p>Serviço '$servico' excluído com sucesso!</p>";
             } else {
@@ -42,12 +35,10 @@
             echo "<p>Serviço não encontrado.</p>";
         }
 
-        // Fechar a conexão
         $stmt->close();
         $delete_stmt->close();
     }
 
-    // Fechar a conexão com o banco
     $conn->close();
     ?>
 <!DOCTYPE html>

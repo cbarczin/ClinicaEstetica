@@ -1,5 +1,4 @@
 <?php
-// Conectar ao banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,12 +6,10 @@ $dbname = "usuario_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar a conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Consultar todos os funcionários
 $sql = "SELECT id, nome FROM funcionarios";
 $result = $conn->query($sql);
 ?>
@@ -43,13 +40,10 @@ $result = $conn->query($sql);
     <main class="content">
         <section class="admin-cards">
             <?php
-            // Verificar se há resultados
             if ($result->num_rows > 0) {
-                // Gerar um cartão para cada funcionário
                 while($row = $result->fetch_assoc()) {
                     echo '<div class="admin-card">';
                     echo '<p>' . $row['nome'] . '</p>';
-                    // Formulário para enviar ID via POST
                     echo '<form method="POST" action="verPerfil.php">';
                     echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                     echo '<button class="profile-btn" type="submit">Ver Perfil</button>';

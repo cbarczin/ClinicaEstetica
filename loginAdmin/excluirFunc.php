@@ -1,5 +1,4 @@
 <?php
-// Conectar ao banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,30 +6,21 @@ $dbname = "usuario_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar a conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Variável para armazenar a mensagem
 $mensagem = "";
 
-// Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Receber o nome do funcionário a ser excluído
     $funcionario_nome = $_POST['funcionario_nome'];
 
-    // Validar se o nome foi informado
     if (!empty($funcionario_nome)) {
-        // Preparar a consulta SQL para excluir o funcionário pelo nome
         $sql = "DELETE FROM funcionarios WHERE nome = ?";
 
-        // Preparar a consulta
         if ($stmt = $conn->prepare($sql)) {
-            // Vincular o parâmetro à consulta
-            $stmt->bind_param("s", $funcionario_nome); // 's' indica string
+            $stmt->bind_param("s", $funcionario_nome);
 
-            // Executar a consulta
             if ($stmt->execute()) {
                 if ($stmt->affected_rows > 0) {
                     $mensagem = "Funcionário excluído com sucesso!";
@@ -41,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mensagem = "Erro ao excluir funcionário: " . $stmt->error;
             }
 
-            // Fechar a declaração
             $stmt->close();
         } else {
             $mensagem = "Erro na preparação da consulta: " . $conn->error;
@@ -51,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Fechar a conexão
 $conn->close();
 ?>
 

@@ -39,7 +39,7 @@
           <button aria-label="Instagram">
             <img src="../images/instagram.png" alt="Ícone do Instagram" />
           </button>
-                   <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
+                  <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
 
             ><img src="../images/entrar.png" alt="Ícone de entrar"
           /></a>
@@ -62,7 +62,6 @@
     </header>
     <main>
       <section class="services-header">
-     
         <h2>PROMOÇÕES</h2>
         <p>
           Colocamos carinho e atenção em cada detalhe para oferecer não só o

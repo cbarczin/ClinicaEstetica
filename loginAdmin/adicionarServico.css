@@ -1,5 +1,4 @@
- /* Centralização da div */
- body, html {
+  body, html {
     height: 100%;
     margin: 0;
     display: flex;
@@ -11,7 +10,6 @@
     color: #8b5d74;
   }
 
-  /* Estilo da div que vai conter o formulário */
   .container {
     background-color: #F4D8DF;
     padding: 20px;
@@ -21,7 +19,6 @@
     text-align: center;
   }
 
-  /* Estilo do formulário */
   form {
     display: flex;
     flex-direction: column;
@@ -75,7 +72,6 @@
     transition: background-color 0.3s;
   }
 
-  /* Estilo para mensagens */
   p {
     font-size: 16px;
     font-weight: bold;

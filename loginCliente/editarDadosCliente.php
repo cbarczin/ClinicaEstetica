@@ -53,7 +53,6 @@
 
     <main class="dados-pessoais">
       <?php
-        // Conexão com o banco de dados
         $host = "localhost";
         $usuario = "root";
         $senha = "";
@@ -65,8 +64,7 @@
           die("Erro de conexão: " . $conexao->connect_error);
         }
 
-        // Consulta SQL para buscar os dados do cliente
-        $sql = "SELECT * FROM cliente WHERE id = 1"; // Alterar ID conforme necessário
+        $sql = "SELECT * FROM cliente WHERE id = 1";
         $resultado = $conexao->query($sql);
 
         if ($resultado->num_rows > 0) {
