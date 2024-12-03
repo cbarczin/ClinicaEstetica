@@ -35,8 +35,7 @@
         <button aria-label="Instagram">
           <img src="../images/instagram.png" alt="Ícone do Instagram" />
         </button>
-                  <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar"
->
+        <a href="/clinicaestetica/loginCliente/dadosCliente.php" aria-label="Entrar">
           <img src="../images/entrar.png" alt="Ícone de entrar" />
         </a>
         <button aria-label="Contato">
@@ -51,7 +50,7 @@
         <li><a href="/clinicaestetica/loginCliente/servicos.php">SERVIÇOS</a></li>
         <li><a href="/clinicaestetica/loginCliente/promoçoes.php">PROMOÇÕES</a></li>
         <li><a href="/clinicaestetica/loginCliente/equipe.php">EQUIPE</a></li>
-          <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
+        <li><a href="/clinicaestetica/loginCliente/centralAjuda.php">CENTRAL DE AJUDA</a></li>
         <li><a href="/clinicaestetica/loginCliente/promoçoes.php">AGENDAR</a></li>
       </ul>
     </nav>
@@ -67,7 +66,7 @@
           <li><a href="/clinicaestetica/loginCliente/dadosCliente.php">Dados pessoais</a></li>
           <li><a href="/clinicaestetica/loginCliente/visualizarEndereço.php">Endereço</a></li>
           <li><a href="/clinicaestetica/loginCliente/autenticacao.php">Autenticação</a></li>
-            <li><a href="/clinicaestetica/loginCliente/meusAgendamentos.php">Pedidos</a></li>
+          <li><a href="/clinicaestetica/loginCliente/meusAgendamentos.php">Pedidos</a></li>
           <li><a href="/clinicaestetica/nologin/index.php">Sair</a></li>
         </ul>
       </nav>
@@ -78,45 +77,40 @@
       </div>
       <h1>Endereços</h1>
 
-      <!-- PHP para exibir os endereços dinamicamente -->
       <?php
-      // Conectar ao banco de dados (substitua as configurações com as suas)
       $servername = "localhost";
       $usuario = "root";
       $senha = "";
       $dbname = "clinicaestetica";
 
-      // Criar conexão
       $conn = new mysqli($servername, $usuario, $senha, $dbname);
 
-      // Verificar conexão
       if ($conn->connect_error) {
           die("Erro na conexão: " . $conn->connect_error);
       }
 
-      // Consulta SQL para buscar os endereços
       $sql = "SELECT id, rua, bairro, cidade, estado, pais, cep FROM enderecos";
       $result = $conn->query($sql);
 
-      // Exibir endereços se houver resultados
       if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
               echo '<div class="address-card">';
-              echo '<p>' . $row["rua"] . '</p>';
-              echo '<p>' . $row["bairro"] . ' - ' . $row["cidade"] . ' - ' . $row["estado"] . '</p>';
-              echo '<p>' . $row["cep"] . '</p>';
-              echo '<p>' . $row["pais"] . '</p>';
-              // Passando o ID do endereço para a página de edição
+              echo '<p><strong>Rua:</strong> ' . $row["rua"] . '</p>';
+              echo '<p><strong>Bairro:</strong> ' . $row["bairro"] . '</p>';
+              echo '<p><strong>Cidade:</strong> ' . $row["cidade"] . '</p>';
+              echo '<p><strong>Estado:</strong> ' . $row["estado"] . '</p>';
+              echo '<p><strong>País:</strong> ' . $row["pais"] . '</p>';
+              echo '<p><strong>CEP:</strong> ' . $row["cep"] . '</p>';
+              echo '<div class="address-actions">';
               echo '<a class="edit-button" href="/clinicaestetica/loginCliente/editarEnderecos.php?id=' . $row["id"] . '">Editar</a>';
-              // Botão para excluir
               echo '<a class="delete-button" href="excluirEndereco.php?id=' . $row["id"] . '" onclick="return confirm(\'Tem certeza que deseja excluir este endereço?\');">Excluir</a>';
+              echo '</div>';
               echo '</div>';
           }
       } else {
           echo '<p>Nenhum endereço encontrado.</p>';
       }
 
-      // Fechar conexão
       $conn->close();
       ?>
     </section>
