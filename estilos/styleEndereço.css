@@ -177,11 +177,73 @@ nav ul li a {
   text-align: right;
 }
 
-main.dados-pessoais {
-  display: flex;
-  padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8e6ef;
+  color: #8b5d74;
+}
+
+main {
+  max-width: 800px;
+  margin: 50px auto; /* Centraliza e adiciona margem vertical */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+  font-size: 24px;
+  color: #8b5d74;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form label {
+  font-size: 14px;
+  color: #8b5d74;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+}
+
+form button {
+  grid-column: span 2; /* Faz o botão ocupar toda a largura */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #8b5d74;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a75e80;
+}
+
+/* Sidebar */
 .sidebar {
   width: 250px;
   background-color: #f3dce4;
@@ -190,19 +252,19 @@ main.dados-pessoais {
   margin-right: 20px;
 }
 
-.profile {
+.sidebar .profile {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.profile-img {
+.sidebar .profile-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
-.profile h2 {
+.sidebar .profile h2 {
   font-size: 18px;
 }
 
@@ -228,6 +290,7 @@ main.dados-pessoais {
   background-color: #e8c8d2;
 }
 
+/* Content */
 .content {
   flex: 1;
   background-color: #fff;
@@ -240,53 +303,4 @@ main.dados-pessoais {
   font-size: 22px;
   margin-bottom: 20px;
   color: #8b5d74;
-}
-
-.details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.info label {
-  font-size: 14px;
-  color: #8b5d74;
-}
-
-.info input {
-  padding: 10px;
-  border: 2px solid #8b5d74;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.edit-button {
-  grid-column: span 2;
-  align-self: center;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background-color: #8b5d74;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.edit-button:hover {
-  background-color: #a75e80;
 }
